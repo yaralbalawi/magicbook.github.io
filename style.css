@@ -1,20 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
-
+*{
+  box-sizing: border-box;
+}
 /* مضاف جديد */
 body{
   margin: 0;
   font-family: 'Raleway', sans-serif;
   background-color: #DAD7CD;
+  
 }
+
 
 h1{
     text-align: center;
 }
+p {
+  text-align: center;
+}
+
 
 /* Container for flexboxes */
 section {
-  display: -webkit-flex;
   display: flex;
 }
 
@@ -26,13 +33,13 @@ article {
   padding: 10px;
 }
 
-
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   section {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
+ 
 }
 
   /*navbar*/
@@ -62,14 +69,10 @@ article {
     display: none;
     
   }
-  .topnav img{
-    float: left;
-    width: 120px;
-    margin-right: 16px;
-  }
+  
   
   @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+    .topnav a {display: none;}
     .topnav a.icon {
       float: right;
       display: block;
@@ -97,8 +100,10 @@ article {
     border:1px solid black;
     border-collapse: collapse;
     border-style: dotted;
-    
-    
+    text-align: center;
+  }
+  th{
+    background-color:#EFECE1;
   }
 
 
@@ -173,51 +178,6 @@ article {
       grid-template-columns: 1fr;
     }
   }
-  /*reviwes slider*/
-  .countainer {
-    padding: 2rem;
-  }
-  .slider-reapper{
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-  .slider{
-display: flex;
-overflow: hidden;
-scroll-behavior: smooth;
-box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
-}
-.slider img{
-flex: 1 0 100%;
-scroll-snap-align: start;
-object-fit: contain;
-}
-.slider-nav{
-  display: flex;
-  column-gap: 1rem;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: black;
-  opacity: 0.75;
-  transition: opacity ease 250rem;
-
-}
-.slider-nav a:hover{
-  opacity: 1;
-}
-.splide__slide img {
-  width: 100%;
-  height: auto;
-}
-
+ 
 
       
