@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>about us</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+
+       
+    
+       <style>
+        #list li {
+    
+          width: 20%;
+          padding: 20px;
+          margin: 20px 0;
+          list-style-type: none;
+          display: inline-block;
+          align-items: center;
+          justify-content: flex-start;
+        }
+    
+        #list li i {
+          float: left;
+          margin-right: 15px;
+        }
+      </style>
+    </head>
+    <body >
+      <!--navbar-->
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" >Home</a>
+        <a href="about us.html">About us</a>
+        <a href="contact us.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <!--students info-->
+      <ul id="list">
+
+        <li>
+        <i><img src="user.png" alt="user" ></i>
+          <div> name: Reema mansour alenze. <br> email:ra1278ru@gmail.com <br>student ID: 421006554 </div>
+        </li>
+
+
+        <li>
+          <i><img src="user.png" alt="user"  ></i>
+          <div> name: yara albalawi. <br> email:albalawit.yara@gmail.com<br>student ID:421002621</div>
+        </li>
+
+
+        <li>
+          <i><img src="user.png" alt="user"  ></i>
+          <div> name:Wegdan atwi. <br> email:Wegd3d44@gmail.com<br>student ID:411004373</div>
+        </li>
+
+
+      </ul>
+
+        <script>
+      
+          var ulElement = document.getElementById('list');
+      
+          var listItems = ulElement.children;
+      
+          for (var i = listItems.length; i >= 0; i--) {
+            var randomIndex = Math.floor(Math.random() * i);
+      
+            var randomLi = listItems[randomIndex];
+            ulElement.appendChild(randomLi);
+          }
+      
+        </script>
+
+
+      <!--footer-->
+      <footer>
+        <div class="row primary">
+        </div>
+        
+        <div class="row copyright">
+         <div class="row primary">
+          <div class="column about">
+            <img src="Library__1_-removebg-preview.png" height="200" width="250">
+          </div>
+        
+          <div class="column link">
+            <h3>menu</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about us.html">about us</a></li>
+              <li><a href="contact us.html">Support</a></li>
+            </ul>
+            </div>
+            <div class="column link">
+              <h3>our library</h3>
+            <ul>
+              <li><a style="text-decoration: none;" href="the sun and her flowers .html">the sun and her flowes</a></li>
+              <li><a style="text-decoration: none;" href="The Boy, The Mole, The Fox And The Horse.html">The Boy, The Mole, The Fox And The Horse</a></li>
+              <li><a style="text-decoration: none;" href="Moxie.html">Moxie</a></li>
+              <li><a style="text-decoration: none;" href="Hope Is the Thing With Feathers.html">Hope Is the Thing With Feathers</a></li>
+              <li><a style="text-decoration: none;" href="The Hunger Games.html">The Hunger Games</a></li>
+              <li><a style="text-decoration: none;" href="The Alchemist.html">The Alchemist</a></li>
+              <li><a style="text-decoration: none;" href="The Da Vinci Code.html">The Da Vinci Code</a></li>
+              <li><a style="text-decoration: none;" href="The Perks of Being a Wallflower.html">The Perks of Being a Wallflower</a></li>
+            </ul>
+          </div>
+
+      </footer>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+    </body>
+</html>
