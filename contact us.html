@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+      
+
+  <style>
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      margin-top: 10rem;
+      padding: 2rem 6rem;
+    }
+
+    .video-container {
+      width: 40%;
+      height: 30rem;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .form-container {
+      width: 50%;
+    }
+
+    .form-container h1 {
+      font-size: 35px;
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+
+    form {
+      border: 2px solid black;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem 0;
+      margin: 1rem 0;
+      border: none;
+      border-bottom: 3px solid black;
+      background-color: #DAD7CD;
+      font-size: 20px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      padding: 8px 2.5rem;
+      border: none;
+      font-size: 20px;
+      background-color: #9CA69A;
+      margin: 1rem 0;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #828b81;
+    }
+
+    @media (max-width:991px) {
+      .video-container {
+        height: 20rem;
+      }
+    }
+
+    @media (max-width:768px) {
+      section {
+        flex-direction: column;
+        padding: 14rem 3rem;
+      }
+
+      .video-container {
+        width: 100%;
+      }
+
+      .form-container {
+        width: 100%;
+        margin-top: 5rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--navbar-->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about us.html">About us</a>
+    <a href="contact us.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <section>
+    <div class="video-container">
+      <video controls src="contact us video.MOV"  autoplay muted></video>
+    </div>
+    <div class="form-container">
+      <h1>Contact Us</h1>
+      <form onsubmit="contactSubmit()">
+        <input type="text" id="Name" placeholder="name" required>
+        <input type="email" id="Email" placeholder="email" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+          required>
+        <textarea id="Message" placeholder="your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+
+  <script>
+    function contactSubmit() {
+
+      var name = document.getElementById('Name').value;
+      var email = document.getElementById('Email').value;
+      var message = document.getElementById('Message').value;
+
+      var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+
+      var link = "mailto:magiclibrary918@gmail.com?subject=Message from magic library contact form"
+        + "&body=" + escape(body);
+
+      window.location.href = link;
+    }
+  </script>
+</body>
+
+</html>
+      <!--footer-->
+<footer>
+  <div class="row primary">
+  </div>
+  
+  <div class="row copyright">
+   <div class="row primary">
+    <div class="column about">
+      <img src="Library__1_-removebg-preview.png" height="200" width="250">
+    </div>
+  
+    <div class="column link">
+      <h3>menu</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">about us</a></li>
+        <li><a href="contact us.html">Support</a></li>
+      </ul>
+      </div>
+      <div class="column link">
+        <h3>our library</h3>
+      <ul>
+        <li><a style="text-decoration: none;" href="the sun and her flowers .html">the sun and her flowes</a></li>
+        <li><a style="text-decoration: none;" href="The Boy, The Mole, The Fox And The Horse.html">The Boy, The Mole, The Fox And The Horse</a></li>
+        <li><a style="text-decoration: none;" href="Moxie.html">Moxie</a></li>
+        <li><a style="text-decoration: none;" href="Hope Is the Thing With Feathers.html">Hope Is the Thing With Feathers</a></li>
+        <li><a style="text-decoration: none;" href="The Hunger Games.html">The Hunger Games</a></li>
+        <li><a style="text-decoration: none;" href="The Alchemist.html">The Alchemist</a></li>
+        <li><a style="text-decoration: none;" href="The Da Vinci Code.html">The Da Vinci Code</a></li>
+        <li><a style="text-decoration: none;" href="The Perks of Being a Wallflower.html">The Perks of Being a Wallflower</a></li>
+      </ul>
+    </div>
+
+</footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+    </body>
+</html>
